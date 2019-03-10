@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RtlSearchview">
+
+        <attr name="searchEdtTextSize" format="dimension"/>
+
+        <attr name="searchStatusbarBackgroundColor" format="color" />
+        <attr name="searchBackground" format="integer" />
+        <attr name="searchBackgroundColor" format="color" />
+        <attr name="searchVoiceIcon" format="integer" />
+        <attr name="searchVoiceHide" format="boolean" />
+        <attr name="searchCloseIcon" format="integer" />
+        <attr name="searchBackIcon" format="integer" />
+
+        <attr name="searchSelectionEnabled" format="boolean"/>
+        <attr name="searchSelectionBackgroundColor" format="color" />
+
+        <attr name="searchSuggestionEnabled" format="boolean"/>
+        <attr name="searchSuggestionBackground" format="integer" />
+        <attr name="searchSuggestionBackgroundColor" format="color" />
+
+        <attr name="historyIcon" format="integer" />
+        <attr name="suggestionIcon" format="integer" />
+        <attr name="listTextColor" format="integer" />
+        <attr name="searchBarHeight" format="dimension"  />
+        <attr name="voiceHintPrompt" format="string" />
+
+        <attr name="android:fitsSystemWindows"/>
+        <attr name="android:hint" />
+        <attr name="android:textColor" />
+        <attr name="android:textColorHint" />
+        <attr name="android:inputType"/>
+    </declare-styleable>
+</resources>

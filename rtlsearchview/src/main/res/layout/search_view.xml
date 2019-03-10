@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/search_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="invisible"
+    tools:targetApi="lollipop">
+
+    <View
+        android:id="@+id/transparent_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/search_layover_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+	    <View
+		    android:id="@+id/view_statusbar"
+		    android:layout_width="match_parent"
+		    android:layout_height="0dp"/>
+
+	    <LinearLayout
+            android:id="@+id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/search_field_bg"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:elevation="4dp">
+	
+	        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:id="@+id/action_clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="@string/cd_clear_button"
+                    android:paddingLeft="@dimen/search_icon_padding"
+                    android:paddingRight="@dimen/search_icon_padding"
+                    app:srcCompat="@drawable/ic_action_navigation_close"
+                    android:visibility="gone" />
+                <ProgressBar
+                    android:id="@+id/prb_wait"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:indeterminateTint="#99000000"
+                    android:progressTint="#99000000"
+                    android:padding="@dimen/search_icon_padding"
+                    android:layout_alignTop="@+id/action_clear"
+                    android:layout_alignBottom="@+id/action_clear"
+                    android:layout_alignRight="@+id/action_clear"
+                    android:layout_alignLeft="@+id/action_clear"
+                    android:visibility="gone"
+                    tools:ignore="RtlHardcoded"/>
+            </RelativeLayout>
+	        
+	        <ImageButton
+		        android:id="@+id/action_voice"
+		        android:layout_width="wrap_content"
+		        android:layout_height="match_parent"
+		        android:background="?attr/selectableItemBackground"
+		        android:contentDescription="@string/cd_voice_search"
+		        android:paddingLeft="@dimen/search_icon_padding"
+		        android:paddingRight="@dimen/search_icon_padding"
+		        app:srcCompat="@drawable/ic_action_voice_search" />
+	        
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_search"
+                app:theme="@style/ThemeSearchEdittext"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="جستجو کنید ..."
+                android:textSize="16sp"
+	            android:gravity="center_vertical|right"
+                android:imeOptions="actionSearch|flagNoExtractUi"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/search_view_text_padding"
+                android:paddingRight="@dimen/search_view_text_padding"
+                android:textAlignment="gravity"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:textCursorDrawable="@null" />
+	        
+	        <ImageButton
+		        android:id="@+id/action_back"
+		        android:layout_width="wrap_content"
+		        android:layout_height="match_parent"
+		        android:scaleX="-1"
+		        android:background="?attr/selectableItemBackground"
+		        android:contentDescription="@string/cd_up_button"
+		        android:paddingLeft="@dimen/search_icon_padding"
+		        android:paddingRight="@dimen/search_icon_padding"
+		        app:srcCompat="@drawable/ic_action_navigation_arrow_back" />
+	        
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/suggestion_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:elevation="4dp"/>
+
+        <ListView
+            android:id="@+id/selection_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:elevation="4dp"
+            android:layout_marginTop="4dp"/>
+
+    </LinearLayout>
+    
+</FrameLayout>
