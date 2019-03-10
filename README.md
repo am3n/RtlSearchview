@@ -8,6 +8,7 @@ RtlSearchview! it's RTL and Fully customizable
 ```gradle
 allprojects {
   repositories {
+    ...
     maven { url 'https://jitpack.io' }
   }
 }
