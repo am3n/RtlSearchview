@@ -1,7 +1,11 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-	<style name="ThemeSearchEdittext" parent="Widget.AppCompat.EditText">
-		<item name="colorAccent">#666</item>
-	</style>
+    <style name="ThemeSearchEdittext" parent="Widget.AppCompat.EditText">
+        <item name="colorAccent">#666</item>
+        <item name="android:colorControlActivated" tools:targetApi="lollipop">#666</item>
+        <item name="colorControlNormal">#666</item>
+        <item name="colorControlActivated">#666</item>
+        <item name="colorControlHighlight">#666</item>
+    </style>
 
 </resources>
