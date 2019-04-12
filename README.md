@@ -1,4 +1,5 @@
 # RtlSearchview
+[![](https://jitpack.io/v/am3n/RtlSearchview.svg)](https://jitpack.io/#am3n/RtlSearchview)
 [![API](https://img.shields.io/badge/API-16%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=16)
 
 RtlSearchview! it's RTL and Fully customizable
