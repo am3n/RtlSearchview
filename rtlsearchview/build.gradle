@@ -3,12 +3,6 @@ apply plugin: 'com.github.dcendents.android-maven'
 
 group = 'com.github.am3n'
 
-/*
- 1   -> 1.0
- 101 -> 1.0.1
- 102 -> 1.0.2
- */
-
 android {
     compileSdkVersion 28
     defaultConfig {

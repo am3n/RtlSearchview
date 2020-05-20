@@ -152,6 +152,8 @@ public class RtlSearchview extends FrameLayout {
 
     private ProgressBar mPrbWait;
 
+    private LinearLayout linr2list;
+
     /**
      * The ListView for displaying suggestions based on the search.
      */
@@ -242,6 +244,7 @@ public class RtlSearchview extends FrameLayout {
         mClear = mRoot.findViewById(R.id.action_clear);
         mPrbWait = mRoot.findViewById(R.id.prb_wait);
         mPrbWait.getIndeterminateDrawable().setColorFilter(Color.parseColor("#99000000"), PorterDuff.Mode.SRC_IN);
+        linr2list = mRoot.findViewById(R.id.linr_2list);
         mSuggestionsListView = mRoot.findViewById(R.id.suggestion_list);
         mSelectionsListView = mRoot.findViewById(R.id.selection_list);
 
@@ -383,6 +386,13 @@ public class RtlSearchview extends FrameLayout {
                 setBackIcon(typedArray.getResourceId(
                         R.styleable.RtlSearchview_searchBackIcon,
                         R.drawable.ic_action_navigation_arrow_back)
+                );
+            }
+
+            if (typedArray.hasValue(R.styleable.RtlSearchview_searchDropBackgroundColor)) {
+                setLinrDropBackgroundColor(typedArray.getColor(
+                    R.styleable.RtlSearchview_searchDropBackgroundColor,
+                    getResources().getColor(R.color.search_layover_bg))
                 );
             }
 
@@ -965,6 +975,10 @@ public class RtlSearchview extends FrameLayout {
      */
     public void setBackIcon(int resourceId) {
         mBack.setImageResource(resourceId);
+    }
+
+    public void setLinrDropBackgroundColor(int color) {
+        linr2list.setBackgroundColor(color);
     }
 
     /**

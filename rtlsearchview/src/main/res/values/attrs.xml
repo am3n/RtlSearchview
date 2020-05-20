@@ -12,6 +12,8 @@
         <attr name="searchCloseIcon" format="integer" />
         <attr name="searchBackIcon" format="integer" />
 
+        <attr name="searchDropBackgroundColor" format="color" />
+
         <attr name="searchSelectionEnabled" format="boolean"/>
         <attr name="searchSelectionBackgroundColor" format="color" />
 
