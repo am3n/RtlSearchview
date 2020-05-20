@@ -15,7 +15,7 @@ allprojects {
 }
 
 dependencies {
-  implementation 'com.github.am3n:RtlSearchview:1.0.3'
+  implementation 'com.github.am3n:RtlSearchview:1.0.4'
 }
 ```
 
