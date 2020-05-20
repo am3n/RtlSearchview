@@ -112,6 +112,8 @@
             android:id="@+id/suggestion_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingTop="4dp"
+            android:clipToPadding="false"
             android:divider="@null"
             android:dividerHeight="0dp"
             android:elevation="4dp" />
@@ -120,7 +122,8 @@
             android:id="@+id/selection_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:paddingTop="4dp"
+            android:clipToPadding="false"
             android:divider="@null"
             android:dividerHeight="0dp"
             android:elevation="4dp" />
